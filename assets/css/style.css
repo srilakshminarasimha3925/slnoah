@@ -1,4 +1,6 @@
-/* Basic Reset */
+/* --------------------------------------------------
+   GLOBAL RESET
+-------------------------------------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -6,97 +8,182 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: #f7f7f7;
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(to bottom, #ffecd2, #fcb69f);
   color: #333;
+  line-height: 1.6;
 }
 
-/* Header */
-.main-header {
-  background: #005f73;
-  color: #fff;
-  padding: 15px 0;
-}
-
-.main-header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.main-header nav a {
-  margin: 0 12px;
-  color: #fff;
-  text-decoration: none;
-}
-
-.main-header nav a:hover {
-  text-decoration: underline;
-}
-
-/* Hero Section */
-.hero {
-  background: #94d2bd;
-  color: #001219;
+/* --------------------------------------------------
+   HEADER
+-------------------------------------------------- */
+header {
   text-align: center;
-  padding: 50px 20px;
+  padding: 30px 10px;
+  background: linear-gradient(135deg, #ff6f61, #ffb88c);
+  color: #fff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+header h1 {
+  font-size: 2.3rem;
+  font-weight: 800;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+/* --------------------------------------------------
+   NAVBAR
+-------------------------------------------------- */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  text-decoration: none;
+  background: #ff6f61;
+  padding: 10px 18px;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  background: #ff9a76;
+  transform: scale(1.05);
+}
+
+/* --------------------------------------------------
+   SECTIONS
+-------------------------------------------------- */
+section {
+  max-width: 1100px;
+  margin: 25px auto;
+  background: #ffffffcc;
+  padding: 25px 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  backdrop-filter: blur(4px);
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #ff6f61;
+  margin-bottom: 14px;
+}
+
+/* --------------------------------------------------
+   HERO BANNER
+-------------------------------------------------- */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  border-radius: 20px;
+  color: #fff;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
 
 .hero h2 {
-  margin-bottom: 8px;
-  font-size: 2.2em;
+  font-size: 2rem;
+  color: #fff;
 }
 
-.hero .locations {
-  list-style: none;
+.hero p {
+  font-size: 1.2rem;
   margin-top: 10px;
 }
 
-.hero .locations li {
-  margin: 4px 0;
+/* --------------------------------------------------
+   LIST STYLES
+-------------------------------------------------- */
+ul {
+  padding-left: 20px;
 }
 
-/* Section Content */
-.section-content {
-  padding: 40px 20px;
-  background: #fff;
-  margin: 20px 0;
+ul li {
+  margin: 8px 0;
+  background: #ffe3dd;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border-left: 4px solid #ff6f61;
 }
 
-.section-content h2 {
-  margin-bottom: 12px;
-  color: #003049;
+/* --------------------------------------------------
+   GALLERY
+-------------------------------------------------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
 }
 
-.section-content ul {
-  list-style: disc;
-  margin-left: 20px;
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+  transition: 0.3s ease;
 }
 
-.section-content ul li {
-  margin: 6px 0;
+.gallery-grid img:hover {
+  transform: scale(1.05);
 }
 
-/* Branch Info */
-.branch-info {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 12px;
-}
-
-.branch-info div {
-  background: #e0fbfc;
-  padding: 12px;
-  border-radius: 4px;
-}
-
-/* Footer */
-.main-footer {
-  background: #001219;
-  color: #fff;
+/* --------------------------------------------------
+   DONATE BOX
+-------------------------------------------------- */
+.donate-box {
+  background: #fff5e6;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px dashed #ff6f61;
   text-align: center;
-  padding: 14px 0;
-  font-size: 14px;
+  font-size: 1.1rem;
+}
+
+/* --------------------------------------------------
+   CONTACT PAGE
+-------------------------------------------------- */
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #ffece6;
+  padding: 18px;
+  border-radius: 12px;
+}
+
+.contact-box div {
+  background: #fff;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+/* --------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
+footer {
+  text-align: center;
+  padding: 18px;
+  background: linear-gradient(135deg, #ff6f61, #ffb88c);
+  color: #fff;
+  font-weight: 600;
+  margin-top: 35px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
