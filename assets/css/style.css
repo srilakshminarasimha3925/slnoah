@@ -1,8 +1,9 @@
-/* --------------------------------------------------
-   GLOBAL DESIGN THEME – Sri Lakshmi Narasimha Old Age Home
-   Modern • Colourful • Smooth • Professional
--------------------------------------------------- */
+/* -------------------------------------------
+   SRI LAKSHMI NARASIMHA OLD AGE HOME THEME
+   Premium Colourful UI – Matches Banner Image
+----------------------------------------------*/
 
+/* GLOBAL RESET */
 * {
   margin: 0;
   padding: 0;
@@ -11,218 +12,178 @@
 
 body {
   font-family: "Poppins", Arial, sans-serif;
-  background: linear-gradient(135deg, #ffecd2, #fcb69f, #a1c4fd, #c2e9fb);
-  background-size: 300% 300%;
-  animation: gradientFlow 12s ease infinite;
-  color: #222;
+  background: #faf6e8; /* light cream */
+  color: #3b2f2f;
   line-height: 1.6;
+
+  animation: fadeIn 1s ease-in;
 }
 
-/* Background animation */
-@keyframes gradientFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+/* MAIN THEME COLORS */
+:root {
+  --maroon: #8b0000;
+  --gold: #d4a017;
+  --navy: #0d1b4c;
+  --cream: #fff8e6;
+  --pink: #c2185b;
+  --green: #1e8449;
+
+  --shadow: rgba(0,0,0,0.18);
 }
 
-/* --------------------------------------------------
-   HEADER
--------------------------------------------------- */
-
-.header {
+/* HEADER */
+header {
+  background: linear-gradient(90deg, var(--maroon), var(--navy));
+  padding: 20px;
   text-align: center;
-  padding: 30px 20px;
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(6px);
-  border-bottom: 3px solid rgba(255, 255, 255, 0.6);
+  color: white;
+  box-shadow: 0 4px 10px var(--shadow);
 }
 
-.header h1 {
+header h1 {
   font-size: 2.4rem;
   font-weight: 800;
-  color: #4a148c;
+  letter-spacing: 1px;
+  animation: slideDown 0.8s ease;
 }
 
-.tagline {
-  margin-top: 8px;
-  font-size: 1.2rem;
-  color: #6a1b9a;
-  font-weight: 600;
+header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
 }
 
-/* --------------------------------------------------
-   NAVBAR
--------------------------------------------------- */
-
-.navbar {
+/* NAVIGATION */
+nav {
+  background: var(--gold);
+  padding: 12px;
   display: flex;
   justify-content: center;
-  gap: 18px;
-  padding: 14px 10px;
-  background: #4a148c;
+  gap: 15px;
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 4px 10px var(--shadow);
 }
 
-.navbar a {
-  color: #fff;
+nav a {
+  color: white;
   text-decoration: none;
-  padding: 10px 16px;
-  font-weight: 600;
+  font-weight: 700;
+  padding: 8px 16px;
   border-radius: 6px;
+  background: var(--maroon);
   transition: 0.3s;
 }
 
-.navbar a:hover {
-  background: #ffca28;
-  color: #4a148c;
+nav a:hover {
+  background: var(--pink);
+  transform: scale(1.06);
 }
 
-/* --------------------------------------------------
-   HERO SECTION
--------------------------------------------------- */
-
-.hero {
-  text-align: center;
-  padding: 60px 25px;
-  background: linear-gradient(135deg, #ffe29f, #ffa99f, #ff719a);
-  color: #4a0e2e;
-  border-radius: 16px;
-  margin: 25px auto;
+/* SECTIONS */
+section {
+  background: white;
+  margin: 20px auto;
   max-width: 1000px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-}
-
-.hero h2 {
-  font-size: 2rem;
-  font-weight: 800;
-}
-
-.hero p {
-  margin-top: 10px;
-  font-size: 1.1rem;
-  font-weight: 500;
-}
-
-/* --------------------------------------------------
-   CONTENT BOXES
--------------------------------------------------- */
-
-.content {
-  max-width: 1000px;
-  margin: 25px auto;
   padding: 25px;
-  background: rgba(255,255,255,0.75);
   border-radius: 14px;
-  backdrop-filter: blur(4px);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 12px var(--shadow);
+  animation: fadeUp 0.8s ease;
 }
 
-.content h2 {
-  color: #4a148c;
-  margin-bottom: 14px;
+section h2 {
+  color: var(--maroon);
   text-align: center;
-  font-size: 1.9rem;
-  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
 }
 
-.content ul li {
-  padding: 6px 0;
-  font-size: 1.05rem;
-}
-
-/* --------------------------------------------------
-   GALLERY GRID
--------------------------------------------------- */
-
-.gallery-grid {
+/* SERVICE CARDS */
+.services {
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
-  gap: 18px;
+  gap: 15px;
 }
 
-.gallery-grid img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  transition: transform 0.3s;
+.card {
+  background: var(--cream);
+  padding: 15px;
+  border-left: 6px solid var(--navy);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px var(--shadow);
+  transition: 0.4s;
 }
 
-.gallery-grid img:hover {
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px var(--shadow);
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  background: var(--maroon);
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--gold);
+  color: black;
   transform: scale(1.05);
 }
 
-/* --------------------------------------------------
-   DONATE BOX
--------------------------------------------------- */
-
-.donate-box {
-  text-align: center;
-  padding: 30px;
-  background: #ffca28;
-  border-radius: 12px;
-  margin-top: 20px;
-}
-
-.donate-btn {
-  display: inline-block;
-  padding: 12px 20px;
-  background: #4a148c;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 700;
-  margin-top: 12px;
-  transition: 0.3s;
-}
-
-.donate-btn:hover {
-  background: #2d0a56;
-}
-
-/* --------------------------------------------------
-   CONTACT FORM
--------------------------------------------------- */
-
-form {
+/* GALLERY */
+.gallery {
   display: grid;
-  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
 }
 
-input, textarea {
-  padding: 12px;
-  border-radius: 6px;
-  border: 2px solid #ccc;
+.gallery img {
   width: 100%;
-  font-size: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px var(--shadow);
+  transition: 0.4s;
 }
 
-button {
-  padding: 12px 18px;
-  background: #4a148c;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
+.gallery img:hover {
+  transform: scale(1.05);
 }
 
-button:hover {
-  background: #6a1b9a;
-}
-
-/* --------------------------------------------------
-   FOOTER
--------------------------------------------------- */
-
-footer {
-  margin-top: 40px;
+/* CONTACT CARDS */
+.contact-box {
+  background: var(--cream);
   padding: 18px;
-  background: #4a148c;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+/* FOOTER */
+footer {
+  background: var(--navy);
   color: white;
   text-align: center;
+  padding: 20px;
+  margin-top: 40px;
   font-size: 1rem;
-  font-weight: 500;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-25px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
