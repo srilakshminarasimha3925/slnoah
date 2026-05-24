@@ -1,6 +1,8 @@
 /* --------------------------------------------------
-   GLOBAL RESET
+   GLOBAL DESIGN THEME – Sri Lakshmi Narasimha Old Age Home
+   Modern • Colourful • Smooth • Professional
 -------------------------------------------------- */
+
 * {
   margin: 0;
   padding: 0;
@@ -9,135 +11,142 @@
 
 body {
   font-family: "Poppins", Arial, sans-serif;
-  background: linear-gradient(to bottom, #ffecd2, #fcb69f);
-  color: #333;
+  background: linear-gradient(135deg, #ffecd2, #fcb69f, #a1c4fd, #c2e9fb);
+  background-size: 300% 300%;
+  animation: gradientFlow 12s ease infinite;
+  color: #222;
   line-height: 1.6;
+}
+
+/* Background animation */
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* --------------------------------------------------
    HEADER
 -------------------------------------------------- */
-header {
+
+.header {
   text-align: center;
-  padding: 30px 10px;
-  background: linear-gradient(135deg, #ff6f61, #ffb88c);
-  color: #fff;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  padding: 30px 20px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(6px);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.6);
 }
 
-header h1 {
-  font-size: 2.3rem;
+.header h1 {
+  font-size: 2.4rem;
   font-weight: 800;
+  color: #4a148c;
 }
 
-.subtitle {
-  font-size: 1.1rem;
-  opacity: 0.95;
+.tagline {
+  margin-top: 8px;
+  font-size: 1.2rem;
+  color: #6a1b9a;
+  font-weight: 600;
 }
 
 /* --------------------------------------------------
    NAVBAR
 -------------------------------------------------- */
-nav {
+
+.navbar {
   display: flex;
   justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  padding: 12px;
-  background: #ffffff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  gap: 18px;
+  padding: 14px 10px;
+  background: #4a148c;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-nav a {
-  text-decoration: none;
-  background: #ff6f61;
-  padding: 10px 18px;
+.navbar a {
   color: #fff;
+  text-decoration: none;
+  padding: 10px 16px;
   font-weight: 600;
-  border-radius: 25px;
-  transition: 0.3s ease;
+  border-radius: 6px;
+  transition: 0.3s;
 }
 
-nav a:hover {
-  background: #ff9a76;
-  transform: scale(1.05);
-}
-
-/* --------------------------------------------------
-   SECTIONS
--------------------------------------------------- */
-section {
-  max-width: 1100px;
-  margin: 25px auto;
-  background: #ffffffcc;
-  padding: 25px 20px;
-  border-radius: 14px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-  backdrop-filter: blur(4px);
-}
-
-h2 {
-  text-align: center;
-  font-size: 1.8rem;
-  color: #ff6f61;
-  margin-bottom: 14px;
+.navbar a:hover {
+  background: #ffca28;
+  color: #4a148c;
 }
 
 /* --------------------------------------------------
-   HERO BANNER
+   HERO SECTION
 -------------------------------------------------- */
+
 .hero {
   text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(to right, #ff9a9e, #fad0c4);
-  border-radius: 20px;
-  color: #fff;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  padding: 60px 25px;
+  background: linear-gradient(135deg, #ffe29f, #ffa99f, #ff719a);
+  color: #4a0e2e;
+  border-radius: 16px;
+  margin: 25px auto;
+  max-width: 1000px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 .hero h2 {
   font-size: 2rem;
-  color: #fff;
+  font-weight: 800;
 }
 
 .hero p {
-  font-size: 1.2rem;
   margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
 /* --------------------------------------------------
-   LIST STYLES
+   CONTENT BOXES
 -------------------------------------------------- */
-ul {
-  padding-left: 20px;
+
+.content {
+  max-width: 1000px;
+  margin: 25px auto;
+  padding: 25px;
+  background: rgba(255,255,255,0.75);
+  border-radius: 14px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
-ul li {
-  margin: 8px 0;
-  background: #ffe3dd;
-  padding: 10px 14px;
-  border-radius: 8px;
-  border-left: 4px solid #ff6f61;
+.content h2 {
+  color: #4a148c;
+  margin-bottom: 14px;
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.content ul li {
+  padding: 6px 0;
+  font-size: 1.05rem;
 }
 
 /* --------------------------------------------------
-   GALLERY
+   GALLERY GRID
 -------------------------------------------------- */
+
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+  gap: 18px;
 }
 
 .gallery-grid img {
   width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
-  transition: 0.3s ease;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
 }
 
 .gallery-grid img:hover {
@@ -147,43 +156,73 @@ ul li {
 /* --------------------------------------------------
    DONATE BOX
 -------------------------------------------------- */
+
 .donate-box {
-  background: #fff5e6;
-  padding: 20px;
-  border-radius: 10px;
-  border: 2px dashed #ff6f61;
   text-align: center;
-  font-size: 1.1rem;
+  padding: 30px;
+  background: #ffca28;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.donate-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #4a148c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 700;
+  margin-top: 12px;
+  transition: 0.3s;
+}
+
+.donate-btn:hover {
+  background: #2d0a56;
 }
 
 /* --------------------------------------------------
-   CONTACT PAGE
+   CONTACT FORM
 -------------------------------------------------- */
-.contact-box {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  background: #ffece6;
-  padding: 18px;
-  border-radius: 12px;
+
+form {
+  display: grid;
+  gap: 14px;
 }
 
-.contact-box div {
-  background: #fff;
+input, textarea {
   padding: 12px;
-  border-radius: 8px;
+  border-radius: 6px;
+  border: 2px solid #ccc;
+  width: 100%;
+  font-size: 1rem;
+}
+
+button {
+  padding: 12px 18px;
+  background: #4a148c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #6a1b9a;
 }
 
 /* --------------------------------------------------
    FOOTER
 -------------------------------------------------- */
+
 footer {
-  text-align: center;
+  margin-top: 40px;
   padding: 18px;
-  background: linear-gradient(135deg, #ff6f61, #ffb88c);
-  color: #fff;
-  font-weight: 600;
-  margin-top: 35px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  background: #4a148c;
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
 }
