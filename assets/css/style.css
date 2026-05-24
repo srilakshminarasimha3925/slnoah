@@ -1,45 +1,41 @@
 /* -------------------------------------------
    SRI LAKSHMI NARASIMHA OLD AGE HOME THEME
-   Premium Colourful UI – Matches Banner Image
+   Premium Colourful UI + Animations + Mobile
 ----------------------------------------------*/
 
-/* GLOBAL RESET */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Poppins", Arial, sans-serif;
-  background: #faf6e8; /* light cream */
-  color: #3b2f2f;
-  line-height: 1.6;
-
-  animation: fadeIn 1s ease-in;
-<div class="hero-slideshow">
-  <img src="images/home1.jpg" class="fade-slide">
-  <img src="images/home2.jpg" class="fade-slide">
-  <img src="images/home3.jpg" class="fade-slide">
-</div>
-}
-
-/* MAIN THEME COLORS */
+/* GLOBAL COLORS */
 :root {
   --maroon: #8b0000;
+  --maroon-dark: #5a0000;
   --gold: #d4a017;
   --navy: #0d1b4c;
   --cream: #fff8e6;
   --pink: #c2185b;
   --green: #1e8449;
-
-  --shadow: rgba(0,0,0,0.18);
+  --shadow: rgba(0, 0, 0, 0.18);
 }
 
-/* HEADER */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: #faf6e8;
+  color: #3b2f2f;
+  line-height: 1.6;
+  animation: fadeIn 1.2s ease;
+}
+
+/* -------------------------------------------
+   HEADER
+----------------------------------------------*/
 header {
   background: linear-gradient(90deg, var(--maroon), var(--navy));
-  padding: 20px;
+  padding: 25px 20px;
   text-align: center;
   color: white;
   box-shadow: 0 4px 10px var(--shadow);
@@ -57,16 +53,19 @@ header p {
   opacity: 0.9;
 }
 
-/* NAVIGATION */
+/* -------------------------------------------
+   NAVIGATION
+----------------------------------------------*/
 nav {
   background: var(--gold);
-  padding: 12px;
+  padding: 12px 10px;
   display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
   box-shadow: 0 4px 10px var(--shadow);
 }
 
@@ -77,175 +76,29 @@ nav a {
   padding: 8px 16px;
   border-radius: 6px;
   background: var(--maroon);
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 nav a:hover {
   background: var(--pink);
-  transform: scale(1.06);
+  transform: scale(1.08);
 }
 
-/* SECTIONS */
-section {
-  background: white;
-  margin: 20px auto;
-  max-width: 1000px;
-  padding: 25px;
-  border-radius: 14px;
-  box-shadow: 0 6px 12px var(--shadow);
-  animation: fadeUp 0.8s ease;
-}
-
-section h2 {
-  color: var(--maroon);
-  text-align: center;
-  margin-bottom: 10px;
-  font-size: 1.8rem;
-}
-
-/* SERVICE CARDS */
-.services {
-  display: grid;
-  gap: 15px;
-}
-
-.card {
-  background: var(--cream);
-  padding: 15px;
-  border-left: 6px solid var(--navy);
-  border-radius: 10px;
-  box-shadow: 0 4px 10px var(--shadow);
-  transition: 0.4s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px var(--shadow);
-}
-
-/* BUTTONS */
-.btn {
-  display: inline-block;
-  background: var(--maroon);
-  color: white;
-  padding: 10px 18px;
-  border-radius: 8px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: var(--gold);
-  color: black;
-  transform: scale(1.05);
-}
-
-/* GALLERY */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-}
-
-.gallery img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px var(--shadow);
-  transition: 0.4s;
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
-}
-
-/* CONTACT CARDS */
-.contact-box {
-  background: var(--cream);
-  padding: 18px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px var(--shadow);
-}
-
-/* FOOTER */
-footer {
-  background: var(--navy);
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  font-size: 1rem;
-}
-
-/* ANIMATIONS */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideDown {
-  from { transform: translateY(-25px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-/* -----------------------------------
-   ANIMATIONS: Smooth, Clean, Premium
-------------------------------------*/
-
-/* Fade In */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(15px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Slide Down */
-@keyframes slideDown {
-  from { transform: translateY(-30px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-/* Zoom In for Images */
-@keyframes zoomIn {
-  from { transform: scale(1.15); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
-
-/* Float Animation */
-@keyframes floatUp {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-  100% { transform: translateY(0); }
-}
-
-/* Fade Slideshow */
-.fade-slide {
-  animation: fadeSlide 12s infinite;
-}
-
-@keyframes fadeSlide {
-  0% { opacity: 0; }
-  15% { opacity: 1; }
-  45% { opacity: 1; }
-  60% { opacity: 0; }
-  100% { opacity: 0; }
-}
+/* -------------------------------------------
+   HERO SLIDESHOW
+----------------------------------------------*/
 .hero-slideshow {
   position: relative;
   width: 100%;
-  height: 380px;
+  height: 350px;
   overflow: hidden;
-  border-bottom: 4px solid var(--gold);
 }
 
 .hero-slideshow img {
-  position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: absolute;
   opacity: 0;
   animation: fadeSlide 12s infinite;
 }
@@ -254,31 +107,146 @@ footer {
 .hero-slideshow img:nth-child(2) { animation-delay: 4s; }
 .hero-slideshow img:nth-child(3) { animation-delay: 8s; }
 
-.service-card {
+@keyframes fadeSlide {
+  0% { opacity: 0; }
+  15% { opacity: 1; }
+  40% { opacity: 1; }
+  60% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* -------------------------------------------
+   SECTIONS
+----------------------------------------------*/
+section {
   background: white;
+  margin: 25px auto;
+  max-width: 1100px;
   padding: 25px;
   border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 12px var(--shadow);
+  animation: fadeUp 1s ease;
+}
+
+section h2 {
   text-align: center;
+  color: var(--maroon);
+  margin-bottom: 12px;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+/* -------------------------------------------
+   SERVICE CARDS
+----------------------------------------------*/
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: var(--cream);
+  padding: 18px;
+  border-left: 6px solid var(--navy);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--shadow);
   transition: 0.4s ease;
-  animation: fadeIn 1s ease;
 }
 
-.service-card:hover {
-  transform: translateY(-10px) scale(1.06);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px var(--shadow);
 }
 
+/* -------------------------------------------
+   BUTTONS
+----------------------------------------------*/
+.btn {
+  display: inline-block;
+  background: var(--maroon);
+  color: white;
+  padding: 10px 22px;
+  border-radius: 8px;
+  margin-top: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--pink);
+  transform: scale(1.05);
+}
+
+/* -------------------------------------------
+   FLOATING CALL BUTTON
+----------------------------------------------*/
 .floating-call {
   position: fixed;
-  right: 20px;
-  bottom: 20px;
-  background: var(--maroon);
-  padding: 15px 25px;
-  border-radius: 50px;
+  bottom: 22px;
+  right: 22px;
+  background: var(--green);
   color: white;
-  font-weight: 700;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  animation: floatUp 3s infinite ease-in-out;
+  padding: 16px 20px;
+  border-radius: 50px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 4px 10px var(--shadow);
+  animation: pulse 1.6s infinite;
+  z-index: 9999;
+}
+
+.floating-call:hover {
+  transform: scale(1.1);
+  background: #0e6b32;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+/* -------------------------------------------
+   FOOTER
+----------------------------------------------*/
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--maroon);
+  color: white;
+  margin-top: 30px;
+}
+
+/* -------------------------------------------
+   RESPONSIVE DESIGN
+----------------------------------------------*/
+@media (max-width: 768px) {
+  header h1 { font-size: 1.8rem; }
+  nav { gap: 8px; }
+  .hero-slideshow { height: 250px; }
+  section { padding: 18px; }
+}
+
+/* -------------------------------------------
+   ANIMATIONS
+----------------------------------------------*/
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-25px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
