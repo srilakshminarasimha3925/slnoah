@@ -63,7 +63,15 @@ Each photo reflects our dedication to caring for our elders with love.</p>
         <img src="/slnoah/assets/gallery/visiting card2.png" class="slide">
     </div>
 </section>
+<div id="header"></div>
 
+<script>
+fetch("header.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("header").innerHTML = data;
+  });
+</script>
 <a href="tel:6303043749" class="floating-call">📞 Call Now</a>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17633805699"></script>
