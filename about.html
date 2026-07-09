@@ -69,6 +69,15 @@ We also offer premium AC rooms and a family-like atmosphere where every elder is
 <script>
   gtag('event', 'conversion', {'send_to': 'AW-17633805699/7J9KCKLwm7kcEIOLuthB'});
 </script>
+  <div id="header"></div>
+
+<script>
+fetch("header.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("header").innerHTML = data;
+  });
+</script>
 <footer>
 © 2026 Sri Lakshmi Narasimha Old Age Home | Serving elders with care & dignity | Chaitanyapuri & Saroornagar
 </footer>
