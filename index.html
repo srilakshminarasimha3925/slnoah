@@ -130,7 +130,15 @@ Sri Lakshmi Narasimha Old Age Home — where care becomes family.</p>
         <img src="/slnoah/assets/gallery/visiting card2.png" class="slide">
     </div>
 </section>
+<div id="header"></div>
 
+<script>
+fetch("header.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("header").innerHTML = data;
+  });
+</script>
 <!-- ABOUT -->
 <section id="about" class="section">
     <h2>About Us</h2>
