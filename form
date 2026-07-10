@@ -1,0 +1,66 @@
+<form action="https://api.web3forms.com/submit" method="POST">
+
+  <!-- Web3Forms Access Key -->
+  <input type="hidden" name="access_key" value="d9e42468-babe-470d-9bb2-2efdbeb8a31a">
+
+  <!-- Name -->
+  <label for="name">Full Name *</label>
+  <input
+    type="text"
+    id="name"
+    name="name"
+    placeholder="Enter your full name"
+    required
+    oninvalid="this.setCustomValidity('Please enter your full name')"
+    oninput="this.setCustomValidity('')"
+  >
+
+  <br><br>
+
+  <!-- Mobile Number -->
+  <label for="mobile">Mobile Number *</label>
+  <input
+    type="tel"
+    id="mobile"
+    name="mobile"
+    placeholder="9876543210"
+    pattern="[6-9][0-9]{9}"
+    maxlength="10"
+    required
+    oninvalid="this.setCustomValidity('Please enter a valid 10-digit Indian mobile number')"
+    oninput="this.setCustomValidity('')"
+  >
+
+  <br><br>
+
+  <!-- Email -->
+  <label for="email">Email Address *</label>
+  <input
+    type="email"
+    id="email"
+    name="email"
+    placeholder="example@email.com"
+    required
+    oninvalid="this.setCustomValidity('Please enter a valid email address')"
+    oninput="this.setCustomValidity('')"
+  >
+
+  <br><br>
+
+  <!-- Message -->
+  <label for="message">Your Message *</label>
+  <textarea
+    id="message"
+    name="message"
+    placeholder="Write your enquiry here..."
+    rows="5"
+    required
+    oninvalid="this.setCustomValidity('Please enter your message')"
+    oninput="this.setCustomValidity('')"
+  ></textarea>
+
+  <br><br>
+
+  <button type="submit">Submit</button>
+
+</form>
