@@ -1,20 +1,8 @@
-<form action="https://api.web3forms.com/submit" method="POST">
+<!-- <form action="https://api.web3forms.com/submit" method="POST">
 
-  <!-- Web3Forms Access Key -->
   <input type="hidden" name="access_key" value="d9e42468-babe-470d-9bb2-2efdbeb8a31a">
 
-  <nav>
-  <a href="/slnoah/index.html" class="active">Home</a>
-  <a href="/slnoah/about.html">About</a>
-  <a href="/slnoah/services.html">Services</a>
-  <a href="/slnoah/gallery.html">Gallery</a>
-  <a href="/slnoah/donate.html">Donate</a>
-  <a href="/slnoah/contact.html">Contact</a>
-  <a href="/slnoah/form.html">submit-enquiry</a>
-  <a href="tel:+916303043749">📞 6303043749</a>
-  <a href="tel:+916303043749">📞 9087612326</a>
-</nav>
-  <!-- Name -->
+ 
   <label for="name">Full Name *</label>
   <input
     type="text"
@@ -28,7 +16,6 @@
 
   <br><br>
 
-  <!-- Mobile Number -->
   <label for="mobile">Mobile Number *</label>
   <input
     type="tel"
@@ -44,7 +31,6 @@
 
   <br><br>
 
-  <!-- Email -->
   <label for="email">Email Address *</label>
   <input
     type="email"
@@ -58,7 +44,6 @@
 
   <br><br>
 
-  <!-- Message -->
   <label for="message">Your Message *</label>
   <textarea
     id="message"
@@ -76,4 +61,282 @@
   
   <input type="hidden" name="redirect" value="https://srilakshminarasimha3925.github.io/slnoah/thankyou.html">
 
+</form> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Enquiry Form | Sri Lakshmi Narasimha Old Age Home</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url("images/oldagehome-bg.jpg");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+min-height:100vh;
+
+padding:30px;
+
+}
+
+.container{
+
+width:100%;
+max-width:600px;
+
+background:rgba(255,255,255,.95);
+
+backdrop-filter:blur(12px);
+
+padding:40px;
+
+border-radius:20px;
+
+box-shadow:0 20px 45px rgba(0,0,0,.30);
+
+}
+
+.logo{
+
+text-align:center;
+
+font-size:45px;
+
+margin-bottom:10px;
+
+}
+
+h1{
+
+text-align:center;
+
+color:#0056b3;
+
+margin-bottom:5px;
+
+}
+
+.subtitle{
+
+text-align:center;
+
+color:#555;
+
+margin-bottom:30px;
+
+}
+
+label{
+
+display:block;
+
+margin-top:18px;
+
+font-weight:bold;
+
+color:#333;
+
+}
+
+input,
+textarea{
+
+width:100%;
+
+padding:15px;
+
+margin-top:8px;
+
+border:1px solid #ddd;
+
+border-radius:10px;
+
+font-size:16px;
+
+transition:.3s;
+
+outline:none;
+
+}
+
+input:focus,
+textarea:focus{
+
+border-color:#0099ff;
+
+box-shadow:0 0 10px rgba(0,153,255,.35);
+
+}
+
+textarea{
+
+resize:none;
+
+}
+
+button{
+
+width:100%;
+
+padding:16px;
+
+margin-top:30px;
+
+background:linear-gradient(45deg,#0099ff,#00c853);
+
+border:none;
+
+border-radius:50px;
+
+color:white;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:translateY(-2px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+
+.note{
+
+margin-top:25px;
+
+text-align:center;
+
+font-size:14px;
+
+color:#666;
+
+}
+
+@media(max-width:600px){
+
+.container{
+
+padding:25px;
+
+}
+
+h1{
+
+font-size:24px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">🏡</div>
+
+<h1>Sri Lakshmi Narasimha Old Age Home</h1>
+
+<p class="subtitle">
+Enquiry / Admission Form
+</p>
+
+<form action="https://api.web3forms.com/submit" method="POST">
+
+<input type="hidden"
+name="access_key"
+value="d9e42468-babe-470d-9bb2-2efdbeb8a31a">
+
+<label>👤 Full Name *</label>
+
+<input
+type="text"
+name="name"
+placeholder="Enter your full name"
+required
+oninvalid="this.setCustomValidity('Please enter your full name')"
+oninput="this.setCustomValidity('')">
+
+<label>📞 Mobile Number *</label>
+
+<input
+type="tel"
+name="mobile"
+placeholder="9876543210"
+pattern="[6-9][0-9]{9}"
+maxlength="10"
+required
+oninvalid="this.setCustomValidity('Please enter a valid 10-digit Indian mobile number')"
+oninput="this.setCustomValidity('')">
+
+<label>📧 Email Address *</label>
+
+<input
+type="email"
+name="email"
+placeholder="example@gmail.com"
+required
+oninvalid="this.setCustomValidity('Please enter a valid email address')"
+oninput="this.setCustomValidity('')">
+
+<label>📝 Your Enquiry *</label>
+
+<textarea
+name="message"
+rows="5"
+placeholder="Write your enquiry here..."
+required
+oninvalid="this.setCustomValidity('Please enter your enquiry')"
+oninput="this.setCustomValidity('')"></textarea>
+
+<button type="submit">
+📩 Submit Enquiry
+</button>
+
+<input type="hidden" name="redirect" value="https://srilakshminarasimha3925.github.io/slnoah/thankyou.html">
+
 </form>
+
+<div class="note">
+
+Our team will contact you as soon as possible.
+
+</div>
+
+</div>
+
+</body>
+</html>
