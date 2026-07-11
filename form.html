@@ -2,39 +2,138 @@
 <html lang="en">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">  
 <style>
-/* Reset */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+.header{
 
-body{
-    margin:0;
-    font-family:'Segoe UI',sans-serif;
-    background:linear-gradient(135deg,#eef8ff,#dff5ff,#ffffff);
-    min-height:100vh;
+background:linear-gradient(135deg,#0077cc,#00c6ff);
+
+color:white;
+
+padding:35px;
+
+border-radius:20px 20px 0 0;
+
+text-align:center;
+
+margin:-35px -35px 35px;
+
 }
-/* Main Container */
-.container{
-    max-width:900px;
-    margin:40px auto;
-    background:#fff;
-    border-radius:20px;
-    padding:35px;
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
+.subtitle{
+
+font-size:20px;
+
+margin-top:10px;
+
+opacity:.95;
+
 }
-/* Logo */
 .logo{
-    display:block;
-    margin:auto;
-    width:120px;
+
+width:130px;
+
+height:130px;
+
+border-radius:50%;
+
+background:white;
+
+padding:10px;
+
+box-shadow:0 10px 20px rgba(0,0,0,.25);
+
+margin-bottom:15px;
+
+}
+input,
+textarea{
+
+background:#f7fbff;
+
+border:2px solid #d7e9ff;
+
 }
 
-/* Heading */
-h1,h2,h3{
-    text-align:center;
-    margin-bottom:20px;
+input:hover,
+textarea:hover{
+
+border-color:#0077cc;
+
+}
+.submit-btn{
+
+background:linear-gradient(45deg,#ff6a00,#ff9900);
+
+font-size:22px;
+
+border-radius:50px;
+
+}
+
+.submit-btn:hover{
+
+transform:scale(1.03);
+
+}
+.home-btn{
+
+display:inline-block;
+
+padding:14px 35px;
+
+background:#343a40;
+
+color:white;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.home-btn:hover{
+
+background:#000;
+
+}
+footer{
+
+margin-top:40px;
+
+padding:20px;
+
+text-align:center;
+
+color:#777;
+
+font-size:15px;
+
+}
+body{
+
+font-family:'Segoe UI',sans-serif;
+
+background:linear-gradient(-45deg,
+#d9f4ff,
+#eefcff,
+#ffffff,
+#c8f1ff);
+
+background-size:400% 400%;
+
+animation:bg 12s ease infinite;
+
+}
+@keyframes bg{
+
+0%{background-position:0% 50%;}
+
+50%{background-position:100% 50%;}
+
+100%{background-position:0% 50%;}
+
 }
 
 /* Form */
@@ -211,10 +310,10 @@ right:10px;
 } 
 
 </style>
-
+<!--
 <body>
 <div class="header">
-<img src="logo.png" class="logo">
+<img src="assets/gallery/SLN-OAH logo1.png" class="logo">
 <h1>Sri Lakshmi Narasimha Old Age Home</h1>
 <p>
 Enquiry form for admission
@@ -278,11 +377,9 @@ required
 oninvalid="this.setCustomValidity('Please enter your enquiry')"
 oninput="this.setCustomValidity('')"></textarea>
 </div>
-<div class="full-width">
 <button type="submit">
 📩 Submit Enquiry
 </button>
-</div>
     <a href="tel:+916303043749" class="floating-call">
     📞 Call Now
 </a>
@@ -296,5 +393,120 @@ oninput="this.setCustomValidity('')"></textarea>
 <input type="hidden" name="redirect" value="https://srilakshminarasimha3925.github.io/slnoah/thankyou.html">
 </form>
 </div>
+</body>
+-->
+<body>
+
+<div class="container">
+
+    <div class="header">
+
+        <img src="assets/gallery/SLN-OAH logo1.png" class="logo">
+
+        <h1>🏡 Sri Lakshmi Narasimha Old Age Home</h1>
+
+        <p class="subtitle">
+            Admission Enquiry Form
+        </p>
+
+    </div>
+
+<form action="https://api.web3forms.com/submit" method="POST">
+
+<input type="hidden"
+name="access_key"
+value="d9e42468-babe-470d-9bb2-2efdbeb8a31a">
+
+<div>
+
+<label>👤 Full Name</label>
+
+<input type="text"
+name="name"
+placeholder="Enter your full name"
+required>
+
+</div>
+
+<div>
+
+<label>📞 Mobile Number</label>
+
+<input
+type="tel"
+name="mobile"
+placeholder="9087612326"
+pattern="[6-9][0-9]{9}"
+required>
+
+</div>
+
+<div class="full-width">
+
+<label>📧 Email Address</label>
+
+<input
+type="email"
+name="email"
+placeholder="example@gmail.com"
+required>
+
+</div>
+
+<div class="full-width">
+
+<label>📝 Your Enquiry</label>
+
+<textarea
+name="message"
+rows="5"
+placeholder="Write your enquiry here..."
+required></textarea>
+
+</div>
+
+<div class="full-width">
+
+<button class="submit-btn">
+
+📩 Submit Enquiry
+
+</button>
+
+</div>
+
+<input
+type="hidden"
+name="redirect"
+value="https://srilakshminarasimha3925.github.io/slnoah/thankyou.html">
+
+</form>
+
+<div style="text-align:center;margin-top:30px;">
+
+<a href="index.html" class="home-btn">
+🏠 Back to Website
+</a>
+
+</div>
+
+</div>
+
+<a href="tel:+916303043749" class="floating-call">
+📞 Call Now
+</a>
+
+<a href="https://maps.app.goo.gl/1WHbUDtxGkX17gcc9"
+target="_blank"
+class="floating-map">
+📍 Directions
+</a>
+
+<footer>
+
+© 2026 Sri Lakshmi Narasimha Old Age Home
+
+</footer>
+
 </body>
 </html>
