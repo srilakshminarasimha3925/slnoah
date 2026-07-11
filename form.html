@@ -183,12 +183,13 @@ Enquiry Form for admission
  <a href="/slnoah/index.html" class="home-btn">🏠 Back to website</a><br>
  
 </div>
-  
+<div class="container">  
 <form action="https://api.web3forms.com/submit" method="POST">
 
 <input type="hidden"
 name="access_key"
 value="d9e42468-babe-470d-9bb2-2efdbeb8a31a">
+<div>
 
 <label>👤 Full Name *</label>
 
@@ -199,6 +200,8 @@ placeholder="Enter your full name"
 required
 oninvalid="this.setCustomValidity('Please enter your full name')"
 oninput="this.setCustomValidity('')">
+</div>
+<div>
 
 <label>📞 Mobile Number *</label>
 
@@ -211,6 +214,8 @@ maxlength="10"
 required
 oninvalid="this.setCustomValidity('Please enter a valid 10-digit Indian mobile number')"
 oninput="this.setCustomValidity('')">
+</div>
+<div>
 
 <label>📧 Email Address *</label>
 
@@ -221,7 +226,8 @@ placeholder="example@gmail.com"
 required
 oninvalid="this.setCustomValidity('Please enter a valid email address')"
 oninput="this.setCustomValidity('')">
-
+</div>
+<div class="full-width">
 <label>📝 Your Enquiry *</label>
 
 <textarea
@@ -231,13 +237,14 @@ placeholder="Write your enquiry here..."
 required
 oninvalid="this.setCustomValidity('Please enter your enquiry')"
 oninput="this.setCustomValidity('')"></textarea>
-
+</div>
+<div class="full-width">
 <button type="submit">
 📩 Submit Enquiry
 </button>
-
+</div>
 <input type="hidden" name="redirect" value="https://srilakshminarasimha3925.github.io/slnoah/thankyou.html">
 </form>
-
+</div>
 </body>
 </html>
